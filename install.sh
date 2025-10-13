@@ -7,9 +7,13 @@ sudo apt install open-vm-tools-desktop -y
 mkdir -p ./Downloads
 mkdir -p $HOME/Documents/Tools
 
-# Wallpaper - TODO: Set desktop wallpaper automatically
+# Homescreen - TODO: Set desktop wallpaper automatically
 mv ./files/z-kali-wallpaper.png $HOME/Pictures/z-kali-wallpaper.png
 sudo ln -sf $HOME/Pictures/z-kali-wallpaper.png /usr/share/desktop-base/kali-theme/login/background # Not sure this works
+xfconf-query -c xfce4-desktop -p /desktop-icons/file-icons/show-home -s false
+xfconf-query -c xfce4-desktop -p /desktop-icons/file-icons/show-trash -s false
+xfconf-query -c xfce4-desktop -p /desktop-icons/file-icons/show-filesystem -s false
+xfconf-query -c xfce4-desktop -p /desktop-icons/file-icons/show-removable -s false
 
 # Set Up .bashrc
 echo '' >> ~/.bashrc

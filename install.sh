@@ -35,4 +35,7 @@ echo 'export GF_PATH="$HOME/Documents/Tools/gf/patterns"' >> ~/.bashrc
 echo 'source "$HOME/Documents/Tools/gf/gf-completion.bash"' >> ~/.bashrc
 rm -rf ./gf # Cleanup
 
+# anew 
+go install -v github.com/tomnomnom/anew@latest
+
 source ~/.bashrc

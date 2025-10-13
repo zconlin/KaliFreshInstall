@@ -38,4 +38,11 @@ rm -rf ./gf # Cleanup
 # anew 
 go install -v github.com/tomnomnom/anew@latest
 
+# ctfr
+git clone https://github.com/UnaPibaGeek/ctfr.git
+mv ./ctfr "$HOME/Documents/Tools/ctfr"
+chmod +x $HOME/Documents/Tools/ctfr/ctfr.py
+sudo ln -s $HOME/Documents/Tools/ctfr/ctfr.py /usr/bin/ctfr
+rm -rf ./ctfr # Cleanup
+
 source ~/.bashrc

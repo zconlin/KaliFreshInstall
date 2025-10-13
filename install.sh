@@ -13,6 +13,7 @@ sudo ln -sf $HOME/Pictures/z-kali-wallpaper.png /usr/share/desktop-base/kali-the
 
 # Set Up .bashrc
 echo '' >> ~/.bashrc
+sed -i "s|alias ll='ls -l'|alias ll='ls -lah'|" ~/.bashrc
 echo '# Custom Aliases and Environment Variables' >> ~/.bashrc
 
 # Golang - WORKS

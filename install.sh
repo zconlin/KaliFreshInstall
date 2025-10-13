@@ -66,6 +66,11 @@ chmod +x $HOME/Documents/Tools/ctfr/ctfr.py
 sudo ln -s $HOME/Documents/Tools/ctfr/ctfr.py /usr/bin/ctfr
 rm -rf ./ctfr # Cleanup
 
+# VS Code
+wget https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+sudo apt install ./download?build=stable\&os=linux-deb-x64 -y
+rm ~/Downloads/download?build=stable\&os=linux-deb-x64
+
 # Go apps
 go install github.com/tomnomnom/anew@latest
 go install github.com/003random/getJS/v2@latest
@@ -78,6 +83,6 @@ source ~/.bashrc
 echo ''
 echo 'Setup complete! This script will now self destruct. Redownload it at https://github.com/zconlin/KaliFreshInstall.'
 rm -rf ../KaliFreshInstall/
-cd $HOME
+cd
 echo 'Please restart your terminal or run "source ~/.bashrc" to apply changes.'
 echo 'Remember to set your desktop wallpaper manually if it was not set automatically.'

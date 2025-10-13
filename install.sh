@@ -15,6 +15,8 @@ echo '# Custom Aliases and Environment Variables' >> ~/.bashrc
 
 # Golang
 sudo apt install golang -y
+echo '' >> ~/.bashrc
+echo '# Golang setup' >> ~/.bashrc
 echo 'export GOROOT=/usr/lib/go' >> ~/.bashrc
 echo 'export GOPATH=$HOME/go' >> ~/.bashrc
 echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bashrc
@@ -22,11 +24,13 @@ echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bashrc
 # gf
 mkdir "$HOME/Documents/Tools/gf" 
 mkdir "$HOME/Documents/Tools/gf/patterns" 
-go get -u github.com/tomnomnom/gf
+go install -u github.com/tomnomnom/gf
 git clone https://github.com/tomnomnom/gf.git
-mv ./gf/examples "$HOME/Documents/Tools/gf/patterns"
+mv ./gf/examples/* "$HOME/Documents/Tools/gf/patterns"
 cp ./gf/gf-completion.bash "$HOME/Documents/Tools/gf/gf-completion.bash"
 ln -s "$HOME/Documents/Tools/gf/patterns" ~/.gf
+echo '' >> ~/.bashrc
+echo '# gf setup' >> ~/.bashrc
 echo 'export GF_PATH="$HOME/Documents/Tools/gf/patterns"' >> ~/.bashrc
 echo 'source "$HOME/Documents/Tools/gf/gf-completion.bash"' >> ~/.bashrc
 rm -rf ./gf # Cleanup

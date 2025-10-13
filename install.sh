@@ -8,6 +8,7 @@ mkdir -p $HOME/Documents/Tools
 # Wallpaper
 mv ./files/z-kali-wallpaper.png $HOME/Pictures/z-kali-wallpaper.png
 sudo ln -sf $HOME/Pictures/z-kali-wallpaper.png /usr/share/desktop-base/kali-theme/login/background
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/last-image -s "$HOME/Pictures/z-kali-wallpaper.png"
 
 # Set Up .bashrc
 echo '' >> ~/.bashrc
@@ -20,6 +21,12 @@ echo '# Golang setup' >> ~/.bashrc
 echo 'export GOROOT=/usr/lib/go' >> ~/.bashrc
 echo 'export GOPATH=$HOME/go' >> ~/.bashrc
 echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bashrc
+
+# Python
+sudo apt install python3 python3-pip -y
+echo '' >> ~/.bashrc
+echo '# Python setup' >> ~/.bashrc
+echo 'export PYTHONPATH=$HOME/.local/lib/python3.x/site-packages:$PYTHONPATH' >> ~/.bashrc
 
 # gf
 mkdir "$HOME/Documents/Tools/gf" 
@@ -36,7 +43,7 @@ echo 'source "$HOME/Documents/Tools/gf/gf-completion.bash"' >> ~/.bashrc
 rm -rf ./gf # Cleanup
 
 # anew 
-go install -v github.com/tomnomnom/anew@latest
+go install github.com/tomnomnom/anew@latest
 
 # ctfr
 git clone https://github.com/UnaPibaGeek/ctfr.git

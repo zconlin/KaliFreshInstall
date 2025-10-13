@@ -1,3 +1,5 @@
+echo 'Starting Kali Linux fresh install setup...'
+
 sudo apt update && sudo apt upgrade -y
 sudo apt install open-vm-tools-desktop -y
 
@@ -27,7 +29,7 @@ echo '' >> ~/.bashrc
 echo '# Python setup' >> ~/.bashrc
 echo 'export PYTHONPATH=$HOME/.local/lib/python3.x/site-packages:$PYTHONPATH' >> ~/.bashrc
 
-# onehistory
+# onehistory - WORKS
 wget https://github.com/1History/1History/releases/download/v0.3.4/1History_v0.3.4_x86_64-unknown-linux-musl.zip
 unzip ./1History_v0.3.4_x86_64-unknown-linux-musl.zip -d $HOME/Documents/Tools/onehistory
 rm 1History_v0.3.4_x86_64-unknown-linux-musl.zip
@@ -39,8 +41,8 @@ echo 'export OH_DB_FILE=$HOME/Documents/Tools/onehistory/database.db' >> ~/.bash
 echo 'export OH_EXPORT_CSV_FILE="$HOME/Documents/Tools/onehistory/export.csv"' >> ~/.bashrc
 
 # gf - WORKS
-mkdir "$HOME/Documents/Tools/gf" 
-mkdir "$HOME/Documents/Tools/gf/patterns" 
+mkdir -p "$HOME/Documents/Tools/gf" 
+mkdir -p "$HOME/Documents/Tools/gf/patterns" 
 go install github.com/tomnomnom/gf@latest
 git clone https://github.com/tomnomnom/gf.git
 mv ./gf/examples/* "$HOME/Documents/Tools/gf/patterns/"
@@ -62,8 +64,17 @@ chmod +x $HOME/Documents/Tools/ctfr/ctfr.py
 sudo ln -s $HOME/Documents/Tools/ctfr/ctfr.py /usr/bin/ctfr
 rm -rf ./ctfr # Cleanup
 
+# GetJS
+go install github.com/003random/getJS/v2@latest
+
+# gau
+go install github.com/lc/gau/v2/cmd/gau@latest
+
 source ~/.bashrc
 
 echo ''
-echo 'Setup complete! Please restart your terminal or run "source ~/.bashrc" to apply changes.'
+echo 'Setup complete! This script will now self destruct. Redownload it at https://github.com/zconlin/KaliFreshInstall.'
+rm -rf ../KaliFreshInstall/
+cd $HOME
+echo 'Please restart your terminal or run "source ~/.bashrc" to apply changes.'
 echo 'Remember to set your desktop wallpaper manually if it was not set automatically.'

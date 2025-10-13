@@ -20,7 +20,7 @@ echo '' >> ~/.bashrc
 sed -i "s|alias ll='ls -l'|alias ll='ls -lah'|" ~/.bashrc
 echo '# Custom Aliases and Environment Variables' >> ~/.bashrc
 
-# Golang - WORKS
+# Golang
 sudo apt install golang -y
 echo '' >> ~/.bashrc
 echo '# Golang setup' >> ~/.bashrc
@@ -34,7 +34,7 @@ echo '' >> ~/.bashrc
 echo '# Python setup' >> ~/.bashrc
 echo 'export PYTHONPATH=$HOME/.local/lib/python3.x/site-packages:$PYTHONPATH' >> ~/.bashrc
 
-# onehistory - WORKS
+# onehistory
 wget https://github.com/1History/1History/releases/download/v0.3.4/1History_v0.3.4_x86_64-unknown-linux-musl.zip
 unzip ./1History_v0.3.4_x86_64-unknown-linux-musl.zip -d $HOME/Documents/Tools/onehistory
 rm 1History_v0.3.4_x86_64-unknown-linux-musl.zip
@@ -45,7 +45,7 @@ echo 'export PATH="$HOME/Documents/Tools/onehistory:$PATH"' >> ~/.bashrc
 echo 'export OH_DB_FILE=$HOME/Documents/Tools/onehistory/database.db' >> ~/.bashrc
 echo 'export OH_EXPORT_CSV_FILE="$HOME/Documents/Tools/onehistory/export.csv"' >> ~/.bashrc
 
-# gf - WORKS
+# gf
 mkdir -p "$HOME/Documents/Tools/gf" 
 mkdir -p "$HOME/Documents/Tools/gf/patterns" 
 go install github.com/tomnomnom/gf@latest
@@ -59,24 +59,22 @@ echo 'export GF_PATH="$HOME/Documents/Tools/gf/patterns"' >> ~/.bashrc
 echo 'source "$HOME/Documents/Tools/gf/gf-completion.bash"' >> ~/.bashrc
 rm -rf ./gf # Cleanup
 
-# anew - WORKS
-go install github.com/tomnomnom/anew@latest
-
-# ctfr - WORKS
+# ctfr
 git clone https://github.com/UnaPibaGeek/ctfr.git
 mv ./ctfr "$HOME/Documents/Tools/ctfr"
 chmod +x $HOME/Documents/Tools/ctfr/ctfr.py
 sudo ln -s $HOME/Documents/Tools/ctfr/ctfr.py /usr/bin/ctfr
 rm -rf ./ctfr # Cleanup
 
-# GetJS
+# Go apps
+go install github.com/tomnomnom/anew@latest
 go install github.com/003random/getJS/v2@latest
-
-# gau
 go install github.com/lc/gau/v2/cmd/gau@latest
 
+# Apply changes to .bashrc
 source ~/.bashrc
 
+# Finish script
 echo ''
 echo 'Setup complete! This script will now self destruct. Redownload it at https://github.com/zconlin/KaliFreshInstall.'
 rm -rf ../KaliFreshInstall/

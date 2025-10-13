@@ -24,7 +24,7 @@ echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bashrc
 # gf
 mkdir "$HOME/Documents/Tools/gf" 
 mkdir "$HOME/Documents/Tools/gf/patterns" 
-go install -u github.com/tomnomnom/gf
+go install github.com/tomnomnom/gf@latest
 git clone https://github.com/tomnomnom/gf.git
 mv ./gf/examples/* "$HOME/Documents/Tools/gf/patterns"
 cp ./gf/gf-completion.bash "$HOME/Documents/Tools/gf/gf-completion.bash"

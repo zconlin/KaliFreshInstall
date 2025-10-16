@@ -77,7 +77,8 @@ go install github.com/003random/getJS/v2@latest
 go install github.com/lc/gau/v2/cmd/gau@latest
 
 # Arachni
-./scripts/arachni-install
+chmod +x ./scripts/arachni-install.sh
+./scripts/arachni-install.sh
 
 # Apply changes to .bashrc
 source ~/.bashrc

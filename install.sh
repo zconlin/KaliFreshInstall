@@ -76,6 +76,8 @@ go install github.com/tomnomnom/anew@latest
 go install github.com/003random/getJS/v2@latest
 go install github.com/lc/gau/v2/cmd/gau@latest
 
+# BeEF
+sudo apt install beef-xss -y
 
 # Apply changes to .bashrc
 source ~/.bashrc

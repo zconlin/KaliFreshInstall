@@ -79,6 +79,12 @@ go install github.com/lc/gau/v2/cmd/gau@latest
 # BeEF
 sudo apt install beef-xss -y
 
+# b374k
+wget https://github.com/b374k/b374k/archive/refs/tags/v3.2.3.tar.gz
+tar -xvzf v3.2.3.tar.gz
+mkdir -p $HOME/Documents/Tools/b374k
+mv ./b374k-3.2.3/b374k.php $HOME/Documents/Tools/b374k/b374k.php
+
 # Apply changes to .bashrc
 source ~/.bashrc
 

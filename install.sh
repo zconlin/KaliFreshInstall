@@ -75,6 +75,7 @@ rm ~/Downloads/download?build=stable\&os=linux-deb-x64
 go install github.com/tomnomnom/anew@latest
 go install github.com/003random/getJS/v2@latest
 go install github.com/lc/gau/v2/cmd/gau@latest
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 
 # BeEF
 sudo apt install beef-xss -y

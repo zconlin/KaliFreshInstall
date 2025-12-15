@@ -76,6 +76,7 @@ go install github.com/tomnomnom/anew@latest
 go install github.com/003random/getJS/v2@latest
 go install github.com/lc/gau/v2/cmd/gau@latest
 go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+go install github.com/bitquark/shortscan/cmd/shortscan@latest
 
 # BeEF
 sudo apt install beef-xss -y

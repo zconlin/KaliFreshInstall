@@ -1,7 +1,17 @@
 echo 'Starting Kali Linux fresh install setup...'
 
 sudo apt update && sudo apt upgrade -y
-sudo apt install open-vm-tools-desktop -y
+sudo apt install open-vm-tools open-vm-tools-desktop -y
+
+# Create User # Untested
+adduser --disabled-password --gecos "" risingtenor
+echo "risingtenor:kali" | chpasswd
+usermod -aG sudo risingtenor
+mkdir -p /home/risingtenor/.ssh
+chmod 700 /home/risingtenor/.ssh
+chown risingtenor:risingtenor /home/risingtenor/.ssh
+passwd -l kali
+usermod -s /usr/sbin/nologin kali
 
 # Prep for script downloads
 mkdir -p ./Downloads
@@ -86,6 +96,9 @@ wget https://github.com/b374k/b374k/archive/refs/tags/v3.2.3.tar.gz
 tar -xvzf v3.2.3.tar.gz
 mkdir -p $HOME/Documents/Tools/b374k
 mv ./b374k-3.2.3/b374k.php $HOME/Documents/Tools/b374k/b374k.php
+
+# AD Testing Tools
+sudo apt install bloodhound neo4j impacket-scripts crackmapexec evil-winrm seclists -y
 
 # Apply changes to .bashrc
 source ~/.bashrc

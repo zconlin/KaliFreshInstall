@@ -44,6 +44,9 @@ echo '' >> ~/.bashrc
 echo '# Python setup' >> ~/.bashrc
 echo 'export PYTHONPATH=$HOME/.local/lib/python3.x/site-packages:$PYTHONPATH' >> ~/.bashrc
 
+# Kali MCP
+sudo apt install mcp-kali-server # Access with `kali-server-mcp`
+
 # onehistory
 wget https://github.com/1History/1History/releases/download/v0.3.4/1History_v0.3.4_x86_64-unknown-linux-musl.zip
 unzip ./1History_v0.3.4_x86_64-unknown-linux-musl.zip -d $HOME/Documents/Tools/onehistory

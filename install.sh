@@ -103,6 +103,9 @@ mv ./b374k-3.2.3/b374k.php $HOME/Documents/Tools/b374k/b374k.php
 # AD Testing Tools
 sudo apt install bloodhound neo4j impacket-scripts crackmapexec evil-winrm seclists -y
 
+# testssl.sh
+sudo apt install testssl.sh
+
 # Apply changes to .bashrc
 source ~/.bashrc
 
